@@ -6,13 +6,29 @@
     </div>
 @endif
     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Item</h1>
-                        <ol class="breadcrumb mb-4">
-                            <a href="{{route('backend.items.create')}}" class="btn btn-primary float-end">Create Item</a>
-                            <li class="breadcrumb-item"><a href="{{route('backend.dashboard')}}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Items</li>
-                        </ol>
-                        
+                        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+
+    <div>
+        <h1 class="mb-2">Item</h1>
+
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+                <a href="{{route('backend.dashboard')}}">Dashboard</a>
+            </li>
+
+            <li class="breadcrumb-item active">
+                Items
+            </li>
+        </ol>
+    </div>
+
+    <div>
+        <a href="{{route('backend.items.create')}}" class="btn btn-primary">
+            Create Item
+        </a>
+    </div>
+
+</div>
                            <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -31,17 +47,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>NO.</th>
-                                            <th>Code No</th>
-                                            <th>Name</th>
-                                            <th>Price</th>
-                                            <th>Instock</th>
-                                            <th>Category</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
+                                    
                                    <tbody>
                                     @php
                                     $i=1;

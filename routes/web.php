@@ -6,6 +6,7 @@ Route::get('/shop-item/{id}',[App\Http\Controllers\FrontController::class,'shopI
 Route::get('item-carts',[App\Http\Controllers\FrontController::class,'carts'])->name('item-carts.carts');
 Route::post('order-now',[App\Http\Controllers\FrontController::class,'orderNow'])->name('orderNow');
 Route::get('item-category/{category_id}',[App\Http\Controllers\FrontController::class,'itemcategory'])->name('item.categories');
+Route::get('/about', function () {return view('front.about');})->name('about');
 Route::group(['middleware'=>['auth','role:admin'],'prefix'=>'backend','as'=>'backend.'],function(){
     Route::get('/',[App\Http\Controllers\Admin\DashboardController::class,'index'])->name('dashboard');
     Route::resource('items',App\Http\Controllers\Admin\ItemController::class);

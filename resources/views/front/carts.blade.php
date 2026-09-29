@@ -39,9 +39,13 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="col-md-6 mt-3 mb-3">
                 <label for="note">Customer Address</label>
-                <input type="text" name="note" class="form-control" required>
+                <input type="text" name="note" class="form-control" required>                
+            </div>
+            <div class="col-md-6 mt-3 mb-3">
+                <label for="number">Customer Phone No</label>
+                <input type="text" name="number" class="form-control" required>               
             </div>
             <button class="btn btn-primary my-3" id="order-now" type="submit">Order Now</button>
 </form>

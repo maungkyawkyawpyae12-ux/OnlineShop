@@ -19,14 +19,16 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="{{route('shop')}}">Paradise Onlineshop</a>
+               
+                <img src="{{ asset('images/logobg.png') }}" style="margin-right:50px;" alt="Bootstrap" width="250" height="150" >
+                <a class="navbar-brand fw-bolder " style="margin-right:30px; font-size:30px;" href="{{route('shop')}}">PARADISE LUXURY TIMEPIECES</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{route('shop')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bolder" aria-current="page" style="color:" href="{{route('shop')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bolder" href="{{route('about')}}">About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <a class="nav-link dropdown-toggle fw-bolder" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                @php 
                                $categories=\App\Models\Category::all();
@@ -89,6 +91,7 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
+         <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="{{asset('front-asset/js/scripts.js')}}"></script>
         <script src="{{asset('front-asset/js/add_to_cart.js')}}"></script>
         @yield('script')

@@ -6,12 +6,29 @@
     </div>
 @endif
     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Category</h1>
-                        <ol class="breadcrumb mb-4">
-                            <a href="{{route('backend.categories.create')}}" class="btn btn-primary float-end">Create Category</a>
-                            <li class="breadcrumb-item"><a href="{{route('backend.dashboard')}}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Categories</li>
-                        </ol>
+                        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+
+    <div>
+        <h1 class="mb-2">Category</h1>
+
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+                <a href="{{route('backend.dashboard')}}">Dashboard</a>
+            </li>
+
+            <li class="breadcrumb-item active">
+                Categories
+            </li>
+        </ol>
+    </div>
+
+    <div>
+        <a href="{{route('backend.categories.create')}}" class="btn btn-primary">
+            Create Category
+        </a>
+    </div>
+
+</div>
                         
                            <div class="card mb-4">
                             <div class="card-header">
@@ -27,13 +44,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>NO.</th>
-                                            <th>Name</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
+                                    
                                    <tbody>
                                     @php
                                     $i=1;
@@ -51,7 +62,7 @@
                                         @endforeach
                                    </tbody>
                                 </table>
-                                    
+                                {{$categories->links()}}    
                             </div>
                         </div>
                     </div>

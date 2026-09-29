@@ -98,7 +98,7 @@ $(document).ready(function () {
                         </td>
                         <td>${Math.round(
                             (v.price - v.price * (v.discount / 100)) * v.qty,
-                        )} MMk</td>
+                        )} $</td>
                 </tr>`;
                 total += Math.round(
                     (v.price - v.price * (v.discount / 100)) * v.qty,
@@ -107,7 +107,7 @@ $(document).ready(function () {
             data += `<tr>
                 <td colspan="6"
                 align="right">Total</td>
-                <td> ${total} MMK</td>
+                <td> ${total}$</td>
             </tr>`;
 
             $("tbody").html(data);

@@ -7,19 +7,19 @@
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{asset($item->image)}}" alt="..." /></div>
                     <div class="col-md-6">
-                        <div class="small mb-1">Code No{{$item->code_no}}</div>
-                        <h1 class="display-5 fw-bolder">{{$item->name}}</h1>
+                        <div class="small mb-1 fw-bolder">Code No-{{$item->code_no}}</div>
+                        <h5 class="display-5 "style="font-weight:20;">{{$item->name}}</h5>
                         <div class="fs-5 mb-5">
                            @if($item->discount>0)
                            
                             <span class="text-decoration-line-through">{{$item->price}}</span>
-                            {{$item->price-($item->price*($item->discount/100))}}MMK
+                            {{$item->price-($item->price*($item->discount/100))}}$
                             @else
-                            {{$item->price}}MMK
+                            {{$item->price}}$
                             @endif
                            
                         </div>
-                        <p class="lead">{{$item->description}}</p>
+                        <p class="lead " style="font-size:25px;">{{$item->description}}</p>
                         <div class="d-flex">
                             <input class="form-control text-center me-3 qty" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                              <button class="btn btn-sm btn-dark addToCart" 
@@ -48,13 +48,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">{{$item->name}}</h5>
+                                    <h6 class="">{{$item->name}}</h6><br>
                                      @if($item->discount>0)
                            
                                       <span class="text-decoration-line-through">{{$item->price}}</span>
-                                      {{$item->price-($item->price*($item->discount/100))}}MMK
+                                      {{$item->price-($item->price*($item->discount/100))}}$
                                       @else
-                                      {{$item->price}}MMK
+                                      {{$item->price}}$
                                       @endif
                                 </div>
                             </div>

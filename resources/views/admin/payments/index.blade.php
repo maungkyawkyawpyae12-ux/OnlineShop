@@ -5,14 +5,30 @@
         {{session('success')}}
     </div>
 @endif
-    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Payment</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="{{route('backend.dashboard')}}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Payments</li>
-                            <a href="{{route('backend.payments.create')}}" class="btn btn-primary float-end">Create Payment</a>
+    <div class="container-fluid px-4 ">
+                        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
 
-                        </ol>
+    <div>
+        <h1 class="mb-2">Payment</h1>
+
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+                <a href="{{route('backend.dashboard')}}">Dashboard</a>
+            </li>
+
+            <li class="breadcrumb-item active">
+                Payments
+            </li>
+        </ol>
+    </div>
+
+    <div>
+        <a href="{{route('backend.payments.create')}}" class="btn btn-primary">
+            Create Payment
+        </a>
+    </div>
+
+</div>
                         
                            <div class="card mb-4">
                             <div class="card-header">

@@ -42,27 +42,18 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>NO.</th>
-                                            <th>Voucher No</th>
-                                            <th>User Name</th>
-                                            <th>Status</th>
-                                            <th>Payment method</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
+                                   
                                    <tbody>
                                     @php
                                     $i=1;
                                     @endphp
                                     @foreach($order_data as $order)
-                                    {
+                                    
                                         @if($order !=null)
                                         <tr>
                                             <td>{{$i++}}</td>
                                             <td>{{$order->voucher_no}}</td>
-                                            <td>{{$order->user->name}}</td>
+                                            <td>{{ optional($order->user)->name ?? 'Unknown User' }}</td>
                                             <td>
                                                 <span class="badge
                                                 @if($order->status=='Pending')
@@ -74,7 +65,7 @@
                                                 @endif">{{$order->status}}</span>
                                             </td>
                                             <td>
-                                                {{$order->payment->name}}
+                                               {{ optional($order->payment)->name ?? 'Unknown Payment' }}
                                             </td>
                                             <td>
                                                 <a href="{{route('backend.orders.detail',$order->voucher_no)}}" class="btn btn-sm btn-info">Details</a>
@@ -82,7 +73,7 @@
                                         </tr>
 
                                         @endif
-                                    }
+                                    
 
                                     @endforeach
                                        
