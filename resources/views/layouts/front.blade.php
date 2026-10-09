@@ -288,20 +288,198 @@
 
 <!-- Footer -->
 
-<footer class="py-5 bg-dark">
+
+<footer class="mt-5 pt-5 pb-3 text-light"
+        style="background-color: #101820;">
 
     <div class="container">
 
-        <p class="m-0 text-center text-white">
+        <div class="row g-4 pb-4">
 
-            Warmly Welcome To Luxe Watch House
+            <!-- Brand Logo -->
+            <div class="col-12 col-md-6 col-lg-4">
 
-        </p>
+                <a href="{{ url('/') }}"
+                   class="text-decoration-none d-inline-flex
+                          align-items-center gap-2 mb-3">
+
+                    <img src="{{ asset('images/logobg.png') }}"
+                         alt="Paradise Logo"
+                         width="48"
+                         height="48"
+                         class="rounded-circle"
+                         style="object-fit: contain;">
+
+                    <span class="fw-bold text-uppercase"
+                          style="color: #C6A45C;">
+                        Paradise<br>
+                        <small class="text-light"
+                               style="font-size: 11px;">
+                            Luxury Timepieces
+                        </small>
+                    </span>
+
+                </a>
+
+                <p class="text-white-50 small">
+                    Find the perfect timepiece for your
+                    style and every special moment.
+                </p>
+
+                <div class="d-flex gap-3 mt-3">
+
+                    <a href="https://www.facebook.com/share/19aMVqt9Qi/"
+                       class="text-decoration-none"
+                       style="color: #C6A45C;"
+                       aria-label="Facebook">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+
+                    <a href="@black_walker77"
+                       class="text-decoration-none"
+                       style="color: #C6A45C;"
+                       aria-label="Telegram">
+                        <i class="bi bi-telegram fs-5"></i>
+                    </a>
+
+                    <a href="https://m.me/61556223669113"
+                       class="text-decoration-none"
+                       style="color: #C6A45C;"
+                       aria-label="Messenger">
+                        <i class="bi bi-messenger fs-5"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Shopping -->
+            <div class="col-6 col-md-3 col-lg-2">
+
+                <h6 class="fw-bold mb-3"
+                    style="color: #C6A45C;">
+                    SHOP
+                </h6>
+
+                <ul class="list-unstyled small">
+
+                    <li class="mb-2">
+                        <a href="{{ url('/') }}"
+                           class="text-white-50 text-decoration-none">
+                            All Watches
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{{ url('/') }}"
+                           class="text-white-50 text-decoration-none">
+                            New Arrivals
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{{ url('/') }}"
+                           class="text-white-50 text-decoration-none">
+                            Our Collection
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{{ url('/item-carts') }}"
+                           class="text-white-50 text-decoration-none">
+                            Shopping Cart
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-6 col-md-3 col-lg-3">
+
+                <h6 class="fw-bold mb-3"
+                    style="color: #C6A45C;">
+                    CUSTOMER CARE
+                </h6>
+
+                <ul class="list-unstyled small">
+
+                    <li class="mb-2">
+                        <span class="text-white-50">
+                            Payment Guide
+                        </span>
+                    </li>
+
+                    <li class="mb-2">
+                        <span class="text-white-50">
+                            Order Information
+                        </span>
+                    </li>
+
+                    <li class="mb-2">
+                        <span class="text-white-50">
+                            Warranty Information
+                        </span>
+                    </li>
+
+                    <li class="mb-2">
+                        <span class="text-white-50">
+                            Customer Support
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Assistance -->
+            <div class="col-12 col-lg-3">
+
+                <h6 class="fw-bold mb-3"
+                    style="color: #C6A45C;">
+                    NEED ASSISTANCE?
+                </h6>
+
+                <p class="text-white-50 small">
+                    Need help with your order or payment?
+                    Get in touch with our team.
+                </p>
+
+                <a href="{{ url('/about') }}"
+                   class="btn btn-outline-warning btn-sm mt-1">
+                    Contact Our Team
+                    <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr style="border-color: #39434B;">
+
+        <!-- Bottom Footer -->
+        <div class="row align-items-center g-2 pt-2">
+
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <small class="text-white-50">
+                    &copy; {{ date('Y') }}
+                    Paradise Luxury Timepieces.
+                    All Rights Reserved.
+                </small>
+            </div>
+
+            <div class="col-12 col-md-6 text-center text-md-end">
+                <small class="text-white-50">
+                    Crafted for Your Timeless Style
+                </small>
+            </div>
+
+        </div>
 
     </div>
 
 </footer>
-
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.js"
